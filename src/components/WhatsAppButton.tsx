@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 export default function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/94760537608"
+      href="https://wa.me/94760537608?text=Hello%20Logic%20Edge!%20I'm%20interested%20in%20your%20services."
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, scale: 0.5, y: 20 }}
