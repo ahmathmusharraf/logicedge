@@ -53,7 +53,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className="text-silver-gradient opacity-80"
+              className="text-white opacity-90"
             >
               SHARP MINDS.
             </motion.span> <br />
@@ -63,7 +63,7 @@ export default function Hero() {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 1.2, duration: 1.5, ease: "easeInOut" }}
-                className="absolute -bottom-1 md:-bottom-2 left-0 h-[1px] md:h-[2px] bg-gold-gradient blur-[1px]"
+                className="absolute -bottom-1 md:-bottom-2 left-0 h-[1px] md:h-[2px] bg-silver-gradient blur-[1px]"
               />
             </span>
           </motion.h1>
