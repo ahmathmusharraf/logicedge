@@ -55,7 +55,7 @@ export default function About() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-gold font-bold tracking-[0.4em] text-[9px] md:text-[10px] uppercase mb-4"
+            className="text-silver font-bold tracking-[0.4em] text-[9px] md:text-[10px] uppercase mb-4"
           >
             OUR ESSENCE
           </motion.span>
@@ -65,7 +65,7 @@ export default function About() {
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6"
           >
-            WHERE LOGIC <br /> <span className="text-gold-gradient italic">MEETS EDGE</span>
+            WHERE <span className="text-silver-gradient">LOGIC</span> <br /> <span className="text-gold-gradient italic">MEETS EDGE</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -122,8 +122,8 @@ export default function About() {
           className="flex flex-col md:flex-row justify-between items-end mb-6 gap-8 text-center md:text-left"
         >
           <div className="max-w-lg">
-            <span className="text-gold font-bold tracking-[0.4em] text-[10px] uppercase mb-3 block">THE MINDS</span>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">ENGINEERING <span className="text-gold-gradient italic uppercase">EXCELLENCE</span></h2>
+            <span className="text-silver font-bold tracking-[0.4em] text-[10px] uppercase mb-3 block">THE MINDS</span>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">ENGINEERING <span className="text-gold-gradient italic uppercase">EXCELLENCE</span></h2>
           </div>
           <p className="max-w-xs text-white/20 text-[11px] leading-relaxed font-tight">
             A diverse collective of specialists obsessed with the intersection of code, design, and strategy.
