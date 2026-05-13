@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand: #d4af37; /* Gold */
+  --color-brand-foreground: #000000;
+  
+  --color-gold: #d4af37;
+  --color-silver: #c0c0c0;
+  
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-brand/30 selection:text-white;
+    background-image: 
+      radial-gradient(circle at 50% -20%, #1a1a1a 0%, #000000 100%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white;
+  }
+}
+
+.glass {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+}
+
+/* Custom Utilities */
+.text-gold {
+  @apply text-brand;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f7ef8a 50%, #d4af37 100%);
+}
+
+.bg-silver-gradient {
+  background: linear-gradient(135deg, #757575 0%, #c0c0c0 50%, #757575 100%);
+}
+
+.text-gold-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #d4af37 0%, #f7ef8a 50%, #d4af37 100%);
+}
+
+.text-silver-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #757575 0%, #c0c0c0 50%, #757575 100%);
+}
+
+.mask-fade-out {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.glow-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(192, 192, 192, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(192, 192, 192, 0.05) 0px, transparent 50%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-20px) translateX(10px); }
+  50% { transform: translateY(0) translateX(20px); }
+  75% { transform: translateY(20px) translateX(10px); }
+}
+
+.animate-float-slow {
+  animation: float 15s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 10s ease-in-out infinite;
+}
