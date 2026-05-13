@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-[1600px] mx-auto px-6 2xl:px-12">
         {/* Main CTA */}
         <div className="flex flex-col items-center text-center mb-20 md:mb-32">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-10 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-10 leading-tight text-white">
             HAVE A PROJECT <br /> <span className="text-gold-gradient italic">IN MIND?</span>
           </h2>
           <button 
@@ -31,7 +31,7 @@ export default function Footer() {
             <Link to="/" className="group mb-4 block">
               <Logo size="sm" />
             </Link>
-            <p className="text-white/40 max-w-sm text-sm leading-relaxed mb-6">
+            <p className="text-white/60 max-w-sm text-sm leading-relaxed mb-6">
               We design and build premium digital experiences that elevate brands and drive real business results.
             </p>
             <div className="flex gap-4">
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     to={link.href} 
-                    className="text-sm text-white/40 hover:text-gold transition-colors block py-0.5"
+                    className="text-sm text-white/60 hover:text-silver-gradient hover:text-silver transition-colors block py-0.5"
                   >
                     {link.name}
                   </Link>
@@ -85,26 +85,26 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-white mb-4">Contact</h4>
-            <ul className="flex flex-col gap-3 text-sm text-white/40">
+            <ul className="flex flex-col gap-3 text-sm text-silver/60">
               <li className="flex items-center gap-3">
-                <Mail size={16} className="text-gold/60" />
-                <a href="mailto:hello@logicedges.com" className="hover:text-gold transition-colors">
+                <Mail size={16} className="text-silver/40" />
+                <a href="mailto:hello@logicedges.com" className="hover:text-white transition-colors">
                   hello@logicedges.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={16} className="text-gold/60" />
-                <a href="tel:+94760537608" className="hover:text-gold transition-colors">
+                <Phone size={16} className="text-silver/40" />
+                <a href="tel:+94760537608" className="hover:text-white transition-colors">
                   +94 76 053 7608
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <MapPin size={16} className="text-gold/60" />
+                <MapPin size={16} className="text-silver/40" />
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=Colombo,Sri+Lanka"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold transition-colors block"
+                  className="hover:text-white transition-colors block"
                 >
                   Colombo, Sri Lanka
                 </a>
