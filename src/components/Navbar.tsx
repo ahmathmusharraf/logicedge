@@ -12,6 +12,8 @@ const NAV_LINKS = [
   { name: "About", href: "/about" },
 ];
 
+import Logo from "./Logo";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -31,15 +33,8 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-md transition-shadow"
     >
       <div className="max-w-[1600px] mx-auto px-6 2xl:px-12 h-full flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="relative w-7 h-7 rotate-45 group-hover:rotate-90 transition-transform duration-500">
-            <div className="absolute inset-0 bg-silver-gradient rounded-sm opacity-100" />
-            <div className="absolute inset-[2px] bg-black rounded-xs" />
-            <div className="absolute inset-[6px] bg-gold-gradient rounded-xs" />
-          </div>
-          <span className="font-display font-bold text-lg tracking-tighter text-white">
-            LOGIC <span className="text-gold-gradient">EDGE</span>
-          </span>
+        <Link to="/" className="group">
+          <Logo size="sm" />
         </Link>
 
         {/* Desktop Links */}
