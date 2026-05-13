@@ -75,22 +75,22 @@ export default function Services() {
                 whileInView={{ width: 24 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="h-[1px] bg-gold md:block hidden" 
+                className="h-[1px] bg-silver/50 md:block hidden" 
               />
-              <span className="text-gold font-bold tracking-[0.3em] text-[8px] md:text-[9px] uppercase">CAPABILITIES</span>
+              <span className="text-silver-gradient font-bold tracking-[0.3em] text-[8px] md:text-[9px] uppercase">CAPABILITIES</span>
               <motion.div 
                 initial={{ width: 0 }}
                 whileInView={{ width: 24 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="h-[1px] bg-gold md:hidden" 
+                className="h-[1px] bg-silver/50 md:hidden" 
               />
             </div>
             <h2 className="text-2xl md:text-5xl font-bold leading-tight tracking-tight uppercase">
               PRECISION <span className="text-gold-gradient italic">SERVICES</span>
             </h2>
           </div>
-          <p className="max-w-xs text-white/20 text-[10px] md:text-xs leading-relaxed font-light mx-auto md:mx-0">
+          <p className="max-w-xs text-white/40 text-[10px] md:text-xs leading-relaxed font-light mx-auto md:mx-0">
             High-end digital solutions for brands that demand perfection. We blend technical rigor with creative intuition.
           </p>
         </motion.div>
