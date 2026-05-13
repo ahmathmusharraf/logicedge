@@ -4,6 +4,8 @@ import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { cn } from "../lib/utils";
 import { useBooking } from "../context/BookingContext";
 
+import Logo from "./Logo";
+
 export default function Footer() {
   const { openBooking } = useBooking();
   return (
@@ -26,14 +28,8 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/5 pt-10">
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="relative w-6 h-6 rotate-45">
-                <div className="absolute inset-0 bg-silver-gradient rounded-xs" />
-                <div className="absolute inset-[4px] bg-gold-gradient rounded-xs" />
-              </div>
-              <span className="font-display font-bold text-lg tracking-tighter text-white">
-                LOGIC <span className="text-gold-gradient">EDGE</span>
-              </span>
+            <Link to="/" className="group mb-4 block">
+              <Logo size="sm" />
             </Link>
             <p className="text-white/40 max-w-sm text-sm leading-relaxed mb-6">
               We design and build premium digital experiences that elevate brands and drive real business results.
