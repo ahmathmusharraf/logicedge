@@ -42,7 +42,7 @@ export default function Footer() {
               {[
                 { logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg", href: "#", color: "hover:bg-blue-600" },
                 { logo: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg", href: "https://www.instagram.com/logic.edge/", color: "hover:bg-pink-600" },
-                { logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg", href: "https://wa.me/94760537608", color: "hover:bg-green-500" },
+                { logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg", href: "https://wa.me/94760537608?text=Hello%20Logic%20Edge!%20I'm%20interested%20in%20your%20services.", color: "hover:bg-green-500" },
                 { logo: "https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg", href: "#", color: "hover:bg-blue-700" }
               ].map(({ logo, href, color }, i) => (
                 <a 
