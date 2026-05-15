@@ -18,7 +18,7 @@ export default function Footer() {
           </h2>
           <button 
             onClick={openBooking}
-            className="group px-8 py-4 bg-gold-gradient text-black text-sm font-bold rounded-full flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+            className="group px-8 py-4 bg-gold-gradient text-white text-sm font-bold rounded-full flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)]"
           >
             BOOK FREE CONSULTANCY
             <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
@@ -114,10 +114,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] text-white/20 uppercase tracking-[0.3em]">
+          <p className="text-xs text-white/20 uppercase tracking-[0.3em]">
             © {new Date().getFullYear()} LOGIC EDGE DESIGN AGENCY. ALL RIGHTS RESERVED.
           </p>
-          <div className="flex gap-8 text-[10px] text-white/20 uppercase tracking-[0.2em]">
+          <div className="flex gap-8 text-xs text-white/20 uppercase tracking-[0.2em]">
             <Link to="/privacy" className="hover:text-gold transition-colors">PRIVACY POLICY</Link>
             <Link to="/terms" className="hover:text-gold transition-colors">TERMS OF SERVICE</Link>
           </div>
