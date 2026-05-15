@@ -162,7 +162,7 @@ export default function BookingModal() {
 
                 <button 
                   type="submit"
-                  className="w-full py-4 bg-gold-gradient text-black font-bold rounded-xl text-xs uppercase tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(212,175,55,0.2)]"
+                  className="w-full py-4 bg-gold-gradient text-white font-bold rounded-xl text-xs uppercase tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(212,175,55,0.2)]"
                 >
                   Confirm Booking & Signal WhatsApp
                 </button>
