@@ -33,8 +33,8 @@ export default function Showcase() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-2 mb-10 md:mb-16"
         >
-          <span className="text-silver-gradient font-bold tracking-[0.3em] text-[9px] md:text-[10px] uppercase">SELECTED WORK</span>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white uppercase">FEATURED <span className="text-gold-gradient italic">PROJECTS</span></h2>
+          <span className="text-silver-gradient font-bold tracking-[0.3em] text-[11px] md:text-xs uppercase">SELECTED WORK</span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white uppercase">FEATURED <span className="text-gold-gradient italic">PROJECTS</span></h2>
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8 md:gap-y-10">
@@ -70,10 +70,10 @@ export default function Showcase() {
                 className="px-1"
               >
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[7px] font-bold text-gold tracking-widest uppercase">0{i + 1}</span>
-                  <span className="text-[7px] font-bold text-white/20 tracking-widest uppercase">{project.category}</span>
+                  <span className="text-[9px] font-bold text-gold tracking-widest uppercase">0{i + 1}</span>
+                  <span className="text-[9px] font-bold text-white/20 tracking-widest uppercase">{project.category}</span>
                 </div>
-                <h3 className="text-[13px] font-display font-bold text-white group-hover:text-gold transition-colors truncate">{project.title}</h3>
+                <h3 className="text-base font-display font-bold text-white group-hover:text-gold transition-colors truncate">{project.title}</h3>
               </motion.div>
             </motion.div>
           ))}
