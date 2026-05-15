@@ -55,7 +55,7 @@ export default function About() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-silver font-bold tracking-[0.4em] text-[9px] md:text-[10px] uppercase mb-4"
+            className="text-silver font-bold tracking-[0.4em] text-[11px] md:text-xs uppercase mb-4"
           >
             OUR ESSENCE
           </motion.span>
@@ -63,7 +63,7 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6"
+            className="text-4xl md:text-6xl font-display font-bold tracking-tight mb-6"
           >
             WHERE <span className="text-silver-gradient">LOGIC</span> <br /> <span className="text-gold-gradient italic">MEETS EDGE</span>
           </motion.h1>
@@ -71,7 +71,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="max-w-xl text-sm md:text-base text-white/40 font-light leading-relaxed mb-8"
+            className="max-w-xl text-base md:text-lg text-white/40 font-light leading-relaxed mb-8"
           >
             Logic Edge was founded on a simple realization: the digital world is cluttered with products that either look good but fail technically, or work well but lack soul. We bridge that gap.
           </motion.p>
@@ -88,8 +88,8 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="mb-8 flex flex-col items-center text-center"
           >
-            <span className="text-gold font-bold tracking-[0.4em] text-[10px] uppercase mb-3 block">CORE PHILOSOPHY</span>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight uppercase">OUR VALUES</h2>
+            <span className="text-gold font-bold tracking-[0.4em] text-xs uppercase mb-3 block">CORE PHILOSOPHY</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase">OUR VALUES</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {VALUES.map((value, i) => (
@@ -104,8 +104,8 @@ export default function About() {
                 <div className="mb-4 p-3 w-fit rounded-lg bg-white/[0.03] border border-white/5 group-hover:border-gold/20 transition-all">
                   {value.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gold transition-colors">{value.title}</h3>
-                <p className="text-[13px] text-white/30 leading-relaxed font-light">{value.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-gold transition-colors">{value.title}</h3>
+                <p className="text-sm text-white/30 leading-relaxed font-light">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -122,10 +122,10 @@ export default function About() {
           className="flex flex-col md:flex-row justify-between items-end mb-6 gap-8 text-center md:text-left"
         >
           <div className="max-w-lg">
-            <span className="text-silver font-bold tracking-[0.4em] text-[10px] uppercase mb-3 block">THE MINDS</span>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">ENGINEERING <span className="text-gold-gradient italic uppercase">EXCELLENCE</span></h2>
+            <span className="text-silver font-bold tracking-[0.4em] text-xs uppercase mb-3 block">THE MINDS</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">ENGINEERING <span className="text-gold-gradient italic uppercase">EXCELLENCE</span></h2>
           </div>
-          <p className="max-w-xs text-white/20 text-[11px] leading-relaxed font-tight">
+          <p className="max-w-xs text-white/20 text-[13px] leading-relaxed font-tight">
             A diverse collective of specialists obsessed with the intersection of code, design, and strategy.
           </p>
         </motion.div>
@@ -146,9 +146,9 @@ export default function About() {
                   {member.initials}
                 </div>
               </div>
-              <h4 className="text-base font-bold text-white mb-1 group-hover:text-gold transition-colors relative z-10">{member.name}</h4>
-              <p className="text-[9px] text-gold font-bold tracking-[0.2em] uppercase mb-4 relative z-10">{member.role}</p>
-              <p className="text-[12px] text-white/30 leading-relaxed font-light relative z-10">
+              <h4 className="text-lg font-bold text-white mb-1 group-hover:text-gold transition-colors relative z-10">{member.name}</h4>
+              <p className="text-[11px] text-gold font-bold tracking-[0.2em] uppercase mb-4 relative z-10">{member.role}</p>
+              <p className="text-[14px] text-white/30 leading-relaxed font-light relative z-10">
                 {member.bio}
               </p>
             </motion.div>
@@ -166,8 +166,8 @@ export default function About() {
           className="p-8 md:p-12 rounded-[2rem] bg-zinc-900/50 border border-white/5 relative overflow-hidden flex flex-col items-center text-center"
         >
           <div className="relative z-10">
-            <span className="text-gold font-bold tracking-[0.4em] text-[10px] uppercase mb-6 block">OUR MISSION</span>
-            <h2 className="text-xl md:text-3xl font-display font-bold text-white tracking-tight mb-0 max-w-2xl leading-snug">
+            <span className="text-gold font-bold tracking-[0.4em] text-xs uppercase mb-6 block">OUR MISSION</span>
+            <h2 className="text-2xl md:text-5xl font-display font-bold text-white tracking-tight mb-0 max-w-2xl leading-snug">
               TO EMPOWER DISRUPTIVE BRANDS WITH <span className="text-gold-gradient italic">PRECISION-BUILT</span> DIGITAL PRODUCTS.
             </h2>
           </div>
