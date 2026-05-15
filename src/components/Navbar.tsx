@@ -65,7 +65,7 @@ export default function Navbar() {
           >
             <button 
               onClick={openBooking}
-              className="px-6 py-2 bg-gold-gradient text-black text-[10px] font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+              className="px-6 py-2 bg-gold-gradient text-white text-[10px] font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)]"
             >
               BOOK FREE CONSULTANCY
             </button>
@@ -109,7 +109,7 @@ export default function Navbar() {
         ))}
         <button 
           onClick={openBooking}
-          className="w-full py-5 bg-gold-gradient text-black text-xs font-bold rounded-xl mt-8"
+          className="w-full py-5 bg-gold-gradient text-white text-xs font-bold rounded-xl mt-8"
         >
           BOOK FREE CONSULTANCY
         </button>
