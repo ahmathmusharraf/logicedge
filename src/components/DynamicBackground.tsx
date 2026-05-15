@@ -21,8 +21,8 @@ export default function DynamicBackground() {
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       const { innerWidth, innerHeight } = window;
-      const x = (clientX / innerWidth - 0.5) * 100;
-      const y = (clientY / innerHeight - 0.5) * 100;
+      const x = (clientX / innerWidth - 0.5) * 200;
+      const y = (clientY / innerHeight - 0.5) * 200;
       mouseX.set(x);
       mouseY.set(y);
     };
@@ -33,6 +33,29 @@ export default function DynamicBackground() {
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Grid Overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(212, 175, 55, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(212, 175, 55, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px'
+        }}
+      />
+
+      {/* Mouse Spotlight on Grid */}
+      <motion.div 
+        className="absolute inset-0"
+        style={{
+          background: useTransform(
+            [springX, springY],
+            ([x, y]) => `radial-gradient(circle at calc(50% + ${x}px) calc(50% + ${y}px), rgba(184, 134, 11, 0.15) 0%, transparent 40%)`
+          )
+        }}
+      />
+
       {/* Mesh Glow */}
       <div className="absolute inset-0 glow-mesh opacity-50" />
       
@@ -40,7 +63,7 @@ export default function DynamicBackground() {
       <motion.div 
         style={{ x: moveX1, y: moveY1 }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
+        animate={{ opacity: 0.12 }}
         transition={{ duration: 2 }}
         className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-gold rounded-full blur-[120px] animate-float-slow"
       />
@@ -48,7 +71,7 @@ export default function DynamicBackground() {
       <motion.div 
         style={{ x: moveX2, y: moveY2 }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
+        animate={{ opacity: 0.08 }}
         transition={{ duration: 2, delay: 0.5 }}
         className="absolute bottom-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-silver rounded-full blur-[150px] animate-float-medium"
       />
@@ -56,14 +79,38 @@ export default function DynamicBackground() {
       <motion.div 
         style={{ x: moveX3, y: moveY3 }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.08 }}
+        animate={{ opacity: 0.06 }}
         transition={{ duration: 2, delay: 1 }}
         className="absolute top-[40%] right-[10%] w-[40vw] h-[40vw] bg-gold rounded-full blur-[100px] animate-float-slow"
       />
 
+      {/* Digital Particles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ 
+            x: Math.random() * 100 + "%", 
+            y: Math.random() * 100 + "%",
+            opacity: 0 
+          }}
+          animate={{ 
+            y: ["-10%", "110%"],
+            opacity: [0, 0.1, 0],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 10 + Math.random() * 20, 
+            repeat: Infinity, 
+            ease: "linear",
+            delay: Math.random() * 10
+          }}
+          className="absolute w-1 h-1 bg-gold rounded-full blur-[1px]"
+        />
+      ))}
+
       {/* Beam effects */}
-      <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-gold/10 to-transparent opacity-30" />
-      <div className="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-silver/5 to-transparent opacity-30" />
+      <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-gold/5 to-transparent opacity-20" />
+      <div className="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-silver/3 to-transparent opacity-20" />
       
       {/* Noise Texture Overlay (Enhanced) */}
       <div className="absolute inset-0 mix-blend-overlay opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
