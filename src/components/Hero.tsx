@@ -34,7 +34,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/5 text-[10px] font-bold tracking-[0.3em] text-gold mb-8 md:mb-10 shadow-2xl"
+            className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/5 text-xs font-bold tracking-[0.3em] text-gold mb-8 md:mb-10 shadow-2xl"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
@@ -72,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-            className="max-w-xl text-base md:text-xl text-white/40 font-light leading-relaxed mb-10 md:mb-12"
+            className="max-w-xl text-lg md:text-2xl text-white/40 font-light leading-relaxed mb-10 md:mb-12"
           >
             A high-end boutique agency building precision-engineered digital products. We merge technical logic with creative edge.
           </motion.p>
@@ -88,7 +88,7 @@ export default function Hero() {
               className="group relative px-8 py-4 md:px-10 md:py-5 font-bold overflow-hidden rounded-full transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(212,175,55,0.2)]"
             >
               <div className="absolute inset-0 bg-gold-gradient" />
-              <span className="relative text-black flex items-center justify-center gap-3 text-sm md:text-base selection:bg-black/10">
+              <span className="relative text-white flex items-center justify-center gap-3 text-sm md:text-base selection:bg-white/10">
                 BOOK FREE CONSULTANCY
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </span>
