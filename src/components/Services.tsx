@@ -77,7 +77,7 @@ export default function Services() {
                 transition={{ duration: 0.8 }}
                 className="h-[1px] bg-silver/50 md:block hidden" 
               />
-              <span className="text-silver-gradient font-bold tracking-[0.3em] text-[8px] md:text-[9px] uppercase">CAPABILITIES</span>
+              <span className="text-silver-gradient font-bold tracking-[0.3em] text-[10px] md:text-[11px] uppercase">CAPABILITIES</span>
               <motion.div 
                 initial={{ width: 0 }}
                 whileInView={{ width: 24 }}
@@ -90,7 +90,7 @@ export default function Services() {
               PRECISION <span className="text-gold-gradient italic">SERVICES</span>
             </h2>
           </div>
-          <p className="max-w-xs text-white/40 text-[10px] md:text-xs leading-relaxed font-light mx-auto md:mx-0">
+          <p className="max-w-xs text-white/40 text-[11px] md:text-sm leading-relaxed font-light mx-auto md:mx-0">
             High-end digital solutions for brands that demand perfection. We blend technical rigor with creative intuition.
           </p>
         </motion.div>
@@ -118,8 +118,8 @@ export default function Services() {
                 </motion.div>
               </div>
               
-              <h3 className="text-[11px] md:text-sm font-bold mb-2 md:mb-3 tracking-wide text-white/70 group-hover:text-white transition-colors uppercase relative z-10">{service.title}</h3>
-              <p className="text-white/20 text-[9px] md:text-[11px] leading-relaxed font-light relative z-10">
+              <h3 className="text-sm md:text-base font-bold mb-2 md:mb-3 tracking-wide text-white/70 group-hover:text-white transition-colors uppercase relative z-10">{service.title}</h3>
+              <p className="text-white/20 text-[11px] md:text-sm leading-relaxed font-light relative z-10">
                 {service.description}
               </p>
 
